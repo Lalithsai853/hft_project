@@ -1,0 +1,111 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-hft-stack"
+version = "0.1.0"
+description = "A private mini-HFT system with end-to-end market data ingestion, limit order book, algorithmic strategies, and ML-driven alpha overlay"
+authors = [
+    {name = "Lalithsai853", email = "lsmadhava@gmail.com"}
+]
+license = {text = "Private"}
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["hft", "trading", "algorithmic-trading", "limit-order-book", "machine-learning"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+dependencies = [
+    # Async and networking
+    "asyncio-mqtt>=0.13.0",
+    "aiofiles>=23.0.0",
+    "websockets>=11.0.0",
+    
+    # Kafka client
+    "confluent-kafka>=2.0.0",
+    
+    # Data processing and numerical
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    
+    # Machine Learning
+    "scikit-learn>=1.3.0",
+    "river>=0.18.0",
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    
+    # Monitoring and metrics
+    "prometheus-client>=0.17.0",
+    "grafana-api>=1.0.3",
+    
+    # Serialization
+    "flatbuffers>=23.0.0",
+    
+    # Testing
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-mock>=3.11.0",
+    
+    # Development and profiling
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "memory-profiler>=0.61.0",
+    "line-profiler>=4.1.0",
+    
+    # Configuration and CLI
+    "click>=8.1.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0.0",
+    
+    # Logging
+    "structlog>=23.0.0",
+    
+    # Date/time handling
+    "arrow>=1.2.0",
+    
+    # Optional: gRPC for IPC
+    "grpcio>=1.56.0",
+    "grpcio-tools>=1.56.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "pre-commit>=3.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/Lalithsai853/hft_project"
+Issues = "https://github.com/Lalithsai853/hft_project/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+exclude = ["tests*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py311', 'py312']
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"] 

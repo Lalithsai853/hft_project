@@ -22,11 +22,40 @@ This project implements a complete high-frequency trading stack designed for:
 ## Technology Stack
 
 - **Core Engine:** C++ (for LOB, matching, ingestion)
-- **Orchestration:** Python 3.8+ (asyncio, testing, ML)
+- **Orchestration:** Python 3.11+ (asyncio, testing, ML)
 - **Messaging:** TCP sockets or Kafka
 - **Serialization:** FlatBuffers or custom binary structs
 - **Monitoring:** Prometheus + Grafana
 - **ML:** scikit-learn, river, PyTorch
+
+## Requirements
+
+- **Python:** 3.11+ (3.11 or 3.12 recommended for optimal HFT performance)
+- **Operating System:** Linux (recommended), macOS, Windows
+- **Memory:** ≥8GB RAM (16GB+ recommended)
+- **Storage:** SSD recommended for low-latency data access
+
+## Installation
+
+1. **Ensure Python 3.11+ is installed:**
+   ```bash
+   python3 --version  # Should show Python 3.11.x or 3.12.x
+   ```
+
+2. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Lalithsai853/hft_project.git
+   cd hft_project
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   # Using pip
+   pip3 install -r requirements.txt
+   
+   # Or using the project file
+   pip3 install -e .
+   ```
 
 ## Project Structure
 
@@ -42,7 +71,8 @@ This project implements a complete high-frequency trading stack designed for:
 ├── tests/                # Unit, integration, and regression tests
 ├── docker/               # Dockerfiles & docker-compose setups
 ├── README.md             # This file
-└── requirements.txt      # Python dependencies
+├── requirements.txt      # Python dependencies
+└── pyproject.toml        # Project configuration
 ```
 
 ## Quick Start

@@ -1,4 +1,8 @@
 # Core Python dependencies for Mini HFT Stack
+# Requires Python 3.11+ for optimal performance in HFT applications
+
+# Python version requirement
+python>=3.11
 
 # Async and networking
 asyncio-mqtt>=0.13.0
