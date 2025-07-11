@@ -1,0 +1,53 @@
+# Core Python dependencies for Mini HFT Stack
+
+# Async and networking
+asyncio-mqtt>=0.13.0
+aiofiles>=23.0.0
+websockets>=11.0.0
+
+# Kafka client
+confluent-kafka>=2.0.0
+
+# Data processing and numerical
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+river>=0.18.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Monitoring and metrics
+prometheus-client>=0.17.0
+grafana-api>=1.0.3
+
+# Serialization
+flatbuffers>=23.0.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.11.0
+
+# Development and profiling
+matplotlib>=3.7.0
+seaborn>=0.12.0
+memory-profiler>=0.61.0
+line-profiler>=4.1.0
+
+# Configuration and CLI
+click>=8.1.0
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Logging
+structlog>=23.0.0
+
+# Date/time handling
+arrow>=1.2.0
+
+# Optional: gRPC for IPC (if using instead of shared memory)
+grpcio>=1.56.0
+grpcio-tools>=1.56.0 
